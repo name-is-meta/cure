@@ -1,0 +1,40 @@
+
+#+TITLE: CURE Project Ideas
+#+SUBTITLE: for the Course-baserd Undergraduate Research Experience
+
+#+AUTHOR: Abraham Brownell
+
+- Log temp every /x/ h/m/s
+- Log sound level every /x/ h/m/s
+- Log peak sound times (e.g. above thresholds)
+- Log temp when sound lvl reached.
+- Track light lvl & temp (and correlate)
+- Vibration due to...
+  - Traffic (trucks/cars)
+  - Foot traffic
+- Track peak jostle of backpack
+  - Histogram/binned data or continuous
+- Buttons
+  - Prof lecturing
+  - Happy tracker
+  - Habit tracker (e.g. knuckle cracking)
+  - Work dosimeter
+  - Sleep tracker
+- Push ups (capacitive touch w/ nose)
+- Squats (2x nasal cap. touch)
+- Flow through a space (foot traffic logging)
+- "Touch the happy banana!"
+- Instant survey
+  - Happy, sad, lonely, & hangry
+- Use hall effect or accel. to determine when water bottle moved.
+- Bikes & boards
+  - Accelerometer
+  - Bounce/jump
+  - Rotary encoder?
+- Fridges & sinks
+  - How often on/open & for how long, etc.
+- Specific measurements
+  - Start/stop buttons
+  - High res sampling when on
+- Turning logging on/off
+- Wind through trees tracking (with accelerometer)

@@ -1,0 +1,20 @@
+#+TITLE: How to Do Cure Things
+#+SUBTITLE: for the Course-baserd Undergraduate Research Experience
+
+#+AUTHOR: Abraham Brownell
+
+
+* Useful Commands
+** Working with the Ubuntu machine
+*** SSHFS mounting
+The IP of the Ubuntu machine may change.
+#+BEGIN_SRC
+sshfs curedev@134.181.125.181:/home/curedev/ESP ~/noSync/ESP
+#+END_SRC
+*** Unmounting
+(On netbook)
+#+BEGIN_SRC
+fusermount -u ~/cure-sync
+#+END_SRC
+** Compiling & Flashing
+*** Compiling NINA firmware

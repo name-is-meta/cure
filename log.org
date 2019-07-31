@@ -1,54 +1,7 @@
-#+TITLE: Master Course Planning Doc
-#+SUBTITLE: for Learning to Program through Environmental Sensing
+#+TITLE: CURE Log/Daily Planning Doc
+#+SUBTITLE: for the Course-baserd Undergraduate Research Experience
 
 #+AUTHOR: Abraham Brownell
-
-:BOILERPLATE:
-#+latex_header: \usepackage{xcolor-material}
-#+latex_header: \hypersetup{colorlinks=true,linkcolor=MaterialCyan}
-:END:
-
-* Ideas
-** Projects --- "Things we can do"
-- Log temp every /x/ h/m/s
-- Log sound level every /x/ h/m/s
-- Log peak sound times (e.g. above thresholds)
-- Log temp when sound lvl reached.
-- Track light lvl & temp (and correlate)
-- Vibration due to...
-  - Traffic (trucks/cars)
-  - Foot traffic
-- Track peak jostle of backpack
-  - Histogram/binned data or continuous
-- Buttons
-  - Prof lecturing
-  - Happy tracker
-  - Habit tracker (e.g. knuckle cracking)
-  - Work dosimeter
-  - Sleep tracker
-- Push ups (capacitive touch w/ nose)
-- Squats (2x nasal cap. touch)
-- Flow through a space (foot traffic logging)
-- "Touch the happy banana!"
-- Instant survey
-  - Happy, sad, lonely, & hangry
-- Use hall effect or accel. to determine when water bottle moved.
-- Bikes & boards
-  - Accelerometer
-  - Bounce/jump
-  - Rotary encoder?
-- Fridges & sinks
-  - How often on/open & for how long, etc.
-- Specific measurements
-  - Start/stop buttons
-  - High res sampling when on
-- Turning logging on/off
-- Wind through trees tracking (with accelerometer)
-** Ways log data from the CPX
-- Finagle a very strange I2C setup
-- Switch to transferring data over serial and write a lot of code to handle dropped messages
-- Bluetooth?
-- Use pin A0 on the CPX to output voltages that are logged by the ESP?
 * Log
 ** Week 0
 *** 6-12 --- Wednesday
@@ -333,46 +286,16 @@ exec(open('file.py').read())
 - 
 *** 7-31 --- Wednesday
 **** Plan
-1) Email about housing.
-   1) CC Matt about travel times
-   2) 
+1) [X] Email about housing.
+   - CC Matt about travel times
+2) [X] Make Github repository
+3) [ ] Organize docs.
+4) 
 **** Log
 1) Made a Racket program that copies a file on a button click (yesterday)
 2) Reconfigured some folders and servers to make more sense.
-3) 
+3) Created Github repository for CURE
+4) Created separate log/planning file.
 **** Questions for Matt
 1) Should we make a git repository for everything?
 2) Heads up about vacation
-* Useful Commands
-** Working with the Ubuntu machine
-*** SSHFS mounting
-The IP of the Ubuntu machine may change.
-#+BEGIN_SRC
-sshfs curedev@134.181.125.181:/home/curedev/ESP ~/noSync/ESP
-#+END_SRC
-*** Unmounting
-(On netbook)
-#+BEGIN_SRC
-fusermount -u ~/cure-sync
-#+END_SRC
-** Compiling & Flashing
-*** Compiling NINA firmware
-* Useful Links
-  
-* Misc.
-** Shopping list
-- Longer USB cables
-- Dish towels
-- Coffee maker
-- Goldfish
-- Sink plunger
-- Wheat Thins
-* Big Plans
-- [ ] Prototype shield (breadboard) & some code
-- [ ] Develop Makecode blocks
-   - Wake data layer
-   - Sleep data layer
-   - etc.
-- [ ] Develop hardware design
-- [ ] Order hardware PCB
-- [ ] Test
