@@ -1,0 +1,378 @@
+#+TITLE: Master Course Planning Doc
+#+SUBTITLE: for Learning to Program through Environmental Sensing
+
+#+AUTHOR: Abraham Brownell
+
+:BOILERPLATE:
+#+latex_header: \usepackage{xcolor-material}
+#+latex_header: \hypersetup{colorlinks=true,linkcolor=MaterialCyan}
+:END:
+
+* Ideas
+** Projects --- "Things we can do"
+- Log temp every /x/ h/m/s
+- Log sound level every /x/ h/m/s
+- Log peak sound times (e.g. above thresholds)
+- Log temp when sound lvl reached.
+- Track light lvl & temp (and correlate)
+- Vibration due to...
+  - Traffic (trucks/cars)
+  - Foot traffic
+- Track peak jostle of backpack
+  - Histogram/binned data or continuous
+- Buttons
+  - Prof lecturing
+  - Happy tracker
+  - Habit tracker (e.g. knuckle cracking)
+  - Work dosimeter
+  - Sleep tracker
+- Push ups (capacitive touch w/ nose)
+- Squats (2x nasal cap. touch)
+- Flow through a space (foot traffic logging)
+- "Touch the happy banana!"
+- Instant survey
+  - Happy, sad, lonely, & hangry
+- Use hall effect or accel. to determine when water bottle moved.
+- Bikes & boards
+  - Accelerometer
+  - Bounce/jump
+  - Rotary encoder?
+- Fridges & sinks
+  - How often on/open & for how long, etc.
+- Specific measurements
+  - Start/stop buttons
+  - High res sampling when on
+- Turning logging on/off
+- Wind through trees tracking (with accelerometer)
+** Ways log data from the CPX
+- Finagle a very strange I2C setup
+- Switch to transferring data over serial and write a lot of code to handle dropped messages
+- Bluetooth?
+- Use pin A0 on the CPX to output voltages that are logged by the ESP?
+* Log
+** Week 0
+*** 6-12 --- Wednesday
+**** Plan
+- Makecode
+  - Plan
+  - Learn some typescript?
+    - Build a simple library?
+- Sensor specs
+  - Get a list of all the sensors.
+**** Questions for Matt
+- There seems to be a custom datalogger library. Should we write our own? 
+**** Log
+- Figured out capacitive touch
+- Began looking into IR sending and receiving between two CPXs.
+- We can do all of the "large" file handling in makecode!
+  - All we need to do is use the "size of file" and "remove file" blocks in the storage section, along with some logic.
+*** 6-13 --- Thursday
+**** Plan
+- Build a data logger that handles oversize logs.
+**** Log
+- Wrote instructions for flashing the CPX.
+  - These need to detail the various quirks more.
+- Spent a lot of time trying to log data in a way that makes sense.
+**** Hurdles
+- Switchright appears to be broken in Makecode.
+- The flash memory on the CPX has proven very difficult to work with (on MacOS). I think we may need to go the sd card route.
+** Week 1
+*** 6-17 --- Monday
+**** Plan
+- Create a wifi access point
+- Provide a download link for stored data
+- Visual indicators for when things are happening
+- Receive communications from the CPX
+- 
+**** Log
+- Learned some JS
+- Got Python onto the ESP
+  - We can do pin things with it
+- Ampy
+  - Able to edit main.py and push it to the ESP
+- Learned to Solder for real
+- Soldered headers to ESP
+  - Mistakes were made
+*** 6-18 --- Tuesday
+**** Plan 
+1) #Cure for yesterday
+2) Document basic ESP operation
+3) Look (a little bit) into coding on the ESP
+4) Wire CPX to ESP
+**** Log
+- Began basic ESP operation doc
+- Accidentally deleted CPX doc
+  - Nothing important was on it
+- Started writing i2c code for ESP32
+  - Nothing seems to be uploading.
+  - NVM, things just aren't running on boot.
+  - Turns out the pyb library is only for the pyboard, whatever that is.
+- Figured out how to run scripts on ESP manually with Ampy. It's pretty trivial.
+- Made blinky test lights less annoying
+- Found the right library for I2C on the ESP32
+- Started looking into Git
+
+*** 6-19 --- Wednesday
+**** Plan
+1) [X] #Cure report for 6-18
+2) [X] Figure out data logging on ESP
+3) [ ] Figure out I2C on CPX
+4) [ ] Wire CPX to ESP
+
+**** Log
+1) Started csv-writing code for the ESP.
+   - Discovered that the csv module doesn't exist in micropython.
+2) Managed to log numbers to a csv file with multiple columns.
+3) Started looking into I2C on the CPX.
+   - It looks like we'll need to write some custom blocks. So I'm diverting to learning some Javascript
+4) Started learning Javascript with Leo.
+*** 6-20 --- Thursday
+**** Plan
+1) [X] Read about custom Makecode blocks
+2) [X] Write trivial Makecode blocks
+3) [X] Read up on I2C on the CPX in JS
+4) [ ] Write I2C queen Makecode block for CPX
+5) [ ] Write I2C worker Python code for ESP
+6) 
+**** Log
+1) Broke my espresso machine
+2) Brought my tea tools over
+3) #Cure report
+4) Plan
+5) Talked to Matt about plans
+6) Started wading through Makecode development for CPX
+   - It looks like the adafruit Makecode editor may work a bit better.
+7) I can make blocks that take variables and do nothing now.
+8) Cloned the pxt-adafruit project for developing blocks.
+   - I'm confused about some of the directions on how to get up and running.
+9) Got slightly less confused.
+*** 6-21 --- Friday
+**** Plan
+1) [X] Write a trivial Makecode block (that does nothing) in the new environment.
+2) [ ] Write a Makecode block that does simple math.
+3) [ ] Write I2C queen Makecode block for CPX
+4) [ ] Write I2C worker Python code for ESP
+5) [ ] 
+**** Log
+1) Cleaned espresso machine
+2) #cure reported
+3) Planned
+4) Learned about the "let" vs. "var" distinction
+5) Turns out I can create custom blocks much as I did before; it's just all local now.
+6) Aaaand it turns out Makecode I2C has already been done on the CPX. It just seems to only be on the Adafruit Makecode editor.
+7) Pivoted to writing I2C code for the ESP in Python.
+8) Thought about finagling a kind of I2C communication with the ESP as the master.
+9) Considered transferring data over serial somehow.
+10) Brainstormed options for transferring data from the CPX.
+*** 6-23 --- Sunday
+1) Started learning git for real.
+** Week 2
+*** 6-24 --- Monday
+**** Plan
+1) Build Linux machine
+2) Set up SSH on Linux machine
+3) Set up SSHFS on Linux machine
+4) Write firmware
+5) Learn basic C++ Syntax
+6) Learn basic OOP stuff in C++
+**** Log
+1) Talked to Matt about plans for future.
+2) #cure report for Friday
+3) Planned
+4) Started digging into C++
+5) Makefiles seemed complicated, but necessary to learn.
+6) Started digging into OOP in C++
+*** 6-25 --- Tuesday
+**** Plan
+1) #cure
+2) Continue according to yesterday's plan.
+3) Set up SSH on Linux machine
+**** Log
+1) Continued working out OOP and multi-file programs in C++.
+2) Meeting with Matt & co.
+3) Started setting up Linux machine
+   1) The username is curedev, the password is s4nsh4m (like without ham).
+4) Linux machine = up and running
+5) Ran into some complications with emacs installation
+6) Planned on sidestepping those complications with SSHFS.
+*** 6-26 --- Wednesday
+**** Plan
+1) Double #cure
+2) Sidestep emacs install issue by using SSHFS
+3) Get the necessary toolkit
+**** Log
+1) #cure + backlog
+2) Got SSHFS working on both machines.
+3) Found the NINA firmware source code.
+4) Found the ESP32 toolchain
+5) Set up ESP toolchain
+6) Set up nina-fw
+7) SSHFS keeps crashing my Mac
+8) SSHFS crashing issue resolved. For now.
+**** Questions
+1) How should I manage the python virtual environments on my computer? Should I just run everything off of the Ubuntu machine?
+*** 6-27 --- Thursday
+**** Plan
+1) Hello world
+2) Look over SPI code for ESP
+3) Try Matt's firmware
+4) Make sure examples from Matt work
+**** Log
+1) Read some of the docs for nina-fw and the toolchain
+2) Broke Spacemacs
+3) Talked to Matt
+4) Fixed Spacemacs
+5)
+**** Questions
+1) What is the relationship between the ESP-IDF and the nina-fw?
+*** 6-28 --- Friday
+**** Plan
+1) Get some kind of I2C working on the ESPs
+2)  
+**** Log
+1) Started looking through the history of the the Jadud fork of nina-fw
+2)
+**** Questions 
+1) What's the best way to familiarize oneself with a code base?
+*** Docket
+- [ ] Learn Git
+- [ ] Learn JS
+- [ ] Learn C++
+- [ ] Write Ninafw(?) firmware
+** Week 3
+*** 7-1 --- Monday
+**** Plan
+1) Meet with Matt
+2) Read about state machines
+3) Get I2C bytes across
+4) 
+**** Log
+1) Looked over new code
+   - It looks like things got messy before we arrived
+*** 7-2 --- Tuesday
+**** Plan
+1) Establish I2C communication
+**** Log
+1) Flashed Python interpreter onto one of the ESPs
+2) 
+** Week 4
+*** 7-9 --- Tuesday
+**** Plan
+1) Plan
+2) Slack Matt with plan
+3) Look over updates to nina-fw code.
+**** Log
+1) Executed the plan.
+** Week 5
+*** 7-16 --- Tuesday
+**** Plan
+1) Find the other Feather
+2) Find 5-10k resistors
+3) Wire up the two Feathers for I2C
+**** Log
+1) (Eventually) found all the parts.
+2) Wired everything up the way the internet said to.
+*** 7-17 --- Wednesday
+**** Plan
+1) Get the relevant code onto the relevant boards
+2) Try to get it to run
+3) Fail
+4) 
+**** Log
+1) Got code running on the feather m4. Used the following command over the serial connection to run scripts:
+#+BEGIN_SRC
+exec(open('file.py').read())
+#+END_SRC
+2) Testing_The_Firmware.py didn't run.
+3) Got it to run, but couldn't find the ESP32 I2C address.
+*** 7-18 --- Thursday
+**** Plan
+1) Review changes to code
+2) Flash code onto ESP32 and run it.
+**** Log
+1) Fixed the wifi on the Linux machine
+2) Ran into the same error
+3) Did a git pull
+4) Recollected how to get firmware onto the ESP32
+** Week 6
+*** Plan
+1) Plan
+2) Get firmware onto ESP32
+3) 
+*** Log
+1) Planned kind of.
+2) Toolchain still isn't working
+3) (Finally) got toolchain working again.
+4) Compilation failed.
+   - Something is pointing to the wrong toolchain.
+5) Got things pointing to the right toolchain.
+6) ...and the same error comes up.
+** Week 7
+*** 7-29 --- Monday
+**** Plan
+1) [X] Draw up questions for Matt
+2) [X] Start charging netbook
+3) [X] Respond to Brittany
+4) [X] Responsd to Alison
+5) [X] Ask Mom about hotel thing
+6) [ ] Revisit questions for Matt
+7) [ ] *Text* Keenan and Kyle about dinner
+8) [ ] Message Madeline about budget
+**** Log
+1) Started planning
+2) Drew up some questions for Matt
+3) 
+**** Questions for Matt
+- Housing
+  - I think I'm scheduled to leave the week of the 19th. Could this be extended to the end of August?
+- Vacation
+  - I'll be heading out on the 10th and gone for a week.
+- Plan B
+  - What needs doing?
+  - CPX with more flash memory?
+- 
+*** 7-31 --- Wednesday
+**** Plan
+1) Email about housing.
+   1) CC Matt about travel times
+   2) 
+**** Log
+1) Made a Racket program that copies a file on a button click (yesterday)
+2) Reconfigured some folders and servers to make more sense.
+3) 
+**** Questions for Matt
+1) Should we make a git repository for everything?
+2) Heads up about vacation
+* Useful Commands
+** Working with the Ubuntu machine
+*** SSHFS mounting
+The IP of the Ubuntu machine may change.
+#+BEGIN_SRC
+sshfs curedev@134.181.125.181:/home/curedev/ESP ~/noSync/ESP
+#+END_SRC
+*** Unmounting
+(On netbook)
+#+BEGIN_SRC
+fusermount -u ~/cure-sync
+#+END_SRC
+** Compiling & Flashing
+*** Compiling NINA firmware
+* Useful Links
+  
+* Misc.
+** Shopping list
+- Longer USB cables
+- Dish towels
+- Coffee maker
+- Goldfish
+- Sink plunger
+- Wheat Thins
+* Big Plans
+- [ ] Prototype shield (breadboard) & some code
+- [ ] Develop Makecode blocks
+   - Wake data layer
+   - Sleep data layer
+   - etc.
+- [ ] Develop hardware design
+- [ ] Order hardware PCB
+- [ ] Test
