@@ -289,13 +289,24 @@ exec(open('file.py').read())
 1) [X] Email about housing.
    - CC Matt about travel times
 2) [X] Make Github repository
-3) [ ] Organize docs.
-4) 
+3) [X] Organize docs.
+4) [ ] Reap up on Racket classes
+5) [ ] Modify Racket code to work with CPX
 **** Log
 1) Made a Racket program that copies a file on a button click (yesterday)
 2) Reconfigured some folders and servers to make more sense.
 3) Created Github repository for CURE
 4) Created separate log/planning file.
+5) Further organized docs.
+6) Deleted junk files.
+7) Started trying to figure out how to make button in copy.rkt interactive.
 **** Questions for Matt
 1) Should we make a git repository for everything?
 2) Heads up about vacation
+*** 8-1 --- Thursday
+**** Plan
+1) [ ] Finish reading about Racket classes
+2) [ ] Modify copy.rkt to work with CPX
+3) [ ] Make copy.rkt confirm copy
+4) [ ] Email Matt about vacation plans
+**** Log
