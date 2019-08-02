@@ -1,5 +1,5 @@
 #+TITLE: CURE Log/Daily Planning Doc
-#+SUBTITLE: for the Course-baserd Undergraduate Research Experience
+#+SUBTITLE: for the Course-based Undergraduate Research Experience
 
 #+AUTHOR: Abraham Brownell
 * Log
@@ -310,3 +310,10 @@ exec(open('file.py').read())
 3) [ ] Make copy.rkt confirm copy
 4) [ ] Email Matt about vacation plans
 **** Log
+1) Got Racket to work in Spacemacs
+2) Brainstormed ways to improve copy.rkt
+   - Got ahead of myself here.
+3) Made things bigger.
+**** Questions for Matt
+1) Why put all the GUI elements in a function? It seems to make it harder to access them.
+

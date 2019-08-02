@@ -26,12 +26,13 @@
 
 (define (button-callback obj evt)
   (copy-file source dest)
-  (send b set-label "Copied!"))
+  (send b set-label "Copied!")
+  (sleep 2)
+  (exit)
+  )
 
 (define w
   (create-window
-   (list (list (make-button "Copy file" (lambda (e) ((copy-file source dest)
-                                                     (hide-window w)
-                                                     )))))))
+   (list (list (make-button "Copy file" (lambda (e) (button-callback)))))))
 
 (show-window w)
