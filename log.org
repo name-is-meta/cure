@@ -2,42 +2,41 @@
 #+SUBTITLE: for the Course-based Undergraduate Research Experience
 
 #+AUTHOR: Abraham Brownell
-* Log
-** Week 0
-*** 6-12 --- Wednesday
-**** Plan
+* Week 0
+** 6-12 --- Wednesday
+*** Plan
 - Makecode
   - Plan
   - Learn some typescript?
     - Build a simple library?
 - Sensor specs
   - Get a list of all the sensors.
-**** Questions for Matt
+*** Questions for Matt
 - There seems to be a custom datalogger library. Should we write our own? 
-**** Log
+*** Log
 - Figured out capacitive touch
 - Began looking into IR sending and receiving between two CPXs.
 - We can do all of the "large" file handling in makecode!
   - All we need to do is use the "size of file" and "remove file" blocks in the storage section, along with some logic.
-*** 6-13 --- Thursday
-**** Plan
+** 6-13 --- Thursday
+*** Plan
 - Build a data logger that handles oversize logs.
-**** Log
+*** Log
 - Wrote instructions for flashing the CPX.
   - These need to detail the various quirks more.
 - Spent a lot of time trying to log data in a way that makes sense.
-**** Hurdles
+*** Hurdles
 - Switchright appears to be broken in Makecode.
 - The flash memory on the CPX has proven very difficult to work with (on MacOS). I think we may need to go the sd card route.
-** Week 1
-*** 6-17 --- Monday
-**** Plan
+* Week 1
+** 6-17 --- Monday
+*** Plan
 - Create a wifi access point
 - Provide a download link for stored data
 - Visual indicators for when things are happening
 - Receive communications from the CPX
 - 
-**** Log
+*** Log
 - Learned some JS
 - Got Python onto the ESP
   - We can do pin things with it
@@ -46,13 +45,13 @@
 - Learned to Solder for real
 - Soldered headers to ESP
   - Mistakes were made
-*** 6-18 --- Tuesday
-**** Plan 
+** 6-18 --- Tuesday
+*** Plan 
 1) #Cure for yesterday
 2) Document basic ESP operation
 3) Look (a little bit) into coding on the ESP
 4) Wire CPX to ESP
-**** Log
+*** Log
 - Began basic ESP operation doc
 - Accidentally deleted CPX doc
   - Nothing important was on it
@@ -65,29 +64,29 @@
 - Found the right library for I2C on the ESP32
 - Started looking into Git
 
-*** 6-19 --- Wednesday
-**** Plan
+** 6-19 --- Wednesday
+*** Plan
 1) [X] #Cure report for 6-18
 2) [X] Figure out data logging on ESP
 3) [ ] Figure out I2C on CPX
 4) [ ] Wire CPX to ESP
 
-**** Log
+*** Log
 1) Started csv-writing code for the ESP.
    - Discovered that the csv module doesn't exist in micropython.
 2) Managed to log numbers to a csv file with multiple columns.
 3) Started looking into I2C on the CPX.
    - It looks like we'll need to write some custom blocks. So I'm diverting to learning some Javascript
 4) Started learning Javascript with Leo.
-*** 6-20 --- Thursday
-**** Plan
+** 6-20 --- Thursday
+*** Plan
 1) [X] Read about custom Makecode blocks
 2) [X] Write trivial Makecode blocks
 3) [X] Read up on I2C on the CPX in JS
 4) [ ] Write I2C queen Makecode block for CPX
 5) [ ] Write I2C worker Python code for ESP
 6) 
-**** Log
+*** Log
 1) Broke my espresso machine
 2) Brought my tea tools over
 3) #Cure report
@@ -99,14 +98,14 @@
 8) Cloned the pxt-adafruit project for developing blocks.
    - I'm confused about some of the directions on how to get up and running.
 9) Got slightly less confused.
-*** 6-21 --- Friday
-**** Plan
+** 6-21 --- Friday
+*** Plan
 1) [X] Write a trivial Makecode block (that does nothing) in the new environment.
 2) [ ] Write a Makecode block that does simple math.
 3) [ ] Write I2C queen Makecode block for CPX
 4) [ ] Write I2C worker Python code for ESP
 5) [ ] 
-**** Log
+*** Log
 1) Cleaned espresso machine
 2) #cure reported
 3) Planned
@@ -117,30 +116,30 @@
 8) Thought about finagling a kind of I2C communication with the ESP as the master.
 9) Considered transferring data over serial somehow.
 10) Brainstormed options for transferring data from the CPX.
-*** 6-23 --- Sunday
+** 6-23 --- Sunday
 1) Started learning git for real.
-** Week 2
-*** 6-24 --- Monday
-**** Plan
+* Week 2
+** 6-24 --- Monday
+*** Plan
 1) Build Linux machine
 2) Set up SSH on Linux machine
 3) Set up SSHFS on Linux machine
 4) Write firmware
 5) Learn basic C++ Syntax
 6) Learn basic OOP stuff in C++
-**** Log
+*** Log
 1) Talked to Matt about plans for future.
 2) #cure report for Friday
 3) Planned
 4) Started digging into C++
 5) Makefiles seemed complicated, but necessary to learn.
 6) Started digging into OOP in C++
-*** 6-25 --- Tuesday
-**** Plan
+** 6-25 --- Tuesday
+*** Plan
 1) #cure
 2) Continue according to yesterday's plan.
 3) Set up SSH on Linux machine
-**** Log
+*** Log
 1) Continued working out OOP and multi-file programs in C++.
 2) Meeting with Matt & co.
 3) Started setting up Linux machine
@@ -148,12 +147,12 @@
 4) Linux machine = up and running
 5) Ran into some complications with emacs installation
 6) Planned on sidestepping those complications with SSHFS.
-*** 6-26 --- Wednesday
-**** Plan
+** 6-26 --- Wednesday
+*** Plan
 1) Double #cure
 2) Sidestep emacs install issue by using SSHFS
 3) Get the necessary toolkit
-**** Log
+*** Log
 1) #cure + backlog
 2) Got SSHFS working on both machines.
 3) Found the NINA firmware source code.
@@ -162,97 +161,97 @@
 6) Set up nina-fw
 7) SSHFS keeps crashing my Mac
 8) SSHFS crashing issue resolved. For now.
-**** Questions
+*** Questions
 1) How should I manage the python virtual environments on my computer? Should I just run everything off of the Ubuntu machine?
-*** 6-27 --- Thursday
-**** Plan
+** 6-27 --- Thursday
+*** Plan
 1) Hello world
 2) Look over SPI code for ESP
 3) Try Matt's firmware
 4) Make sure examples from Matt work
-**** Log
+*** Log
 1) Read some of the docs for nina-fw and the toolchain
 2) Broke Spacemacs
 3) Talked to Matt
 4) Fixed Spacemacs
 5)
-**** Questions
+*** Questions
 1) What is the relationship between the ESP-IDF and the nina-fw?
-*** 6-28 --- Friday
-**** Plan
+** 6-28 --- Friday
+*** Plan
 1) Get some kind of I2C working on the ESPs
 2)  
-**** Log
+*** Log
 1) Started looking through the history of the the Jadud fork of nina-fw
 2)
-**** Questions 
+*** Questions 
 1) What's the best way to familiarize oneself with a code base?
-*** Docket
+** Docket
 - [ ] Learn Git
 - [ ] Learn JS
 - [ ] Learn C++
 - [ ] Write Ninafw(?) firmware
-** Week 3
-*** 7-1 --- Monday
-**** Plan
+* Week 3
+** 7-1 --- Monday
+*** Plan
 1) Meet with Matt
 2) Read about state machines
 3) Get I2C bytes across
 4) 
-**** Log
+*** Log
 1) Looked over new code
    - It looks like things got messy before we arrived
-*** 7-2 --- Tuesday
-**** Plan
+** 7-2 --- Tuesday
+*** Plan
 1) Establish I2C communication
-**** Log
+*** Log
 1) Flashed Python interpreter onto one of the ESPs
 2) 
-** Week 4
-*** 7-9 --- Tuesday
-**** Plan
+* Week 4
+** 7-9 --- Tuesday
+*** Plan
 1) Plan
 2) Slack Matt with plan
 3) Look over updates to nina-fw code.
-**** Log
+*** Log
 1) Executed the plan.
-** Week 5
-*** 7-16 --- Tuesday
-**** Plan
+* Week 5
+** 7-16 --- Tuesday
+*** Plan
 1) Find the other Feather
 2) Find 5-10k resistors
 3) Wire up the two Feathers for I2C
-**** Log
+*** Log
 1) (Eventually) found all the parts.
 2) Wired everything up the way the internet said to.
-*** 7-17 --- Wednesday
-**** Plan
+** 7-17 --- Wednesday
+*** Plan
 1) Get the relevant code onto the relevant boards
 2) Try to get it to run
 3) Fail
 4) 
-**** Log
+*** Log
 1) Got code running on the feather m4. Used the following command over the serial connection to run scripts:
 #+BEGIN_SRC
 exec(open('file.py').read())
 #+END_SRC
 2) Testing_The_Firmware.py didn't run.
 3) Got it to run, but couldn't find the ESP32 I2C address.
-*** 7-18 --- Thursday
-**** Plan
+** 7-18 --- Thursday
+*** Plan
 1) Review changes to code
 2) Flash code onto ESP32 and run it.
-**** Log
+*** Log
 1) Fixed the wifi on the Linux machine
 2) Ran into the same error
 3) Did a git pull
 4) Recollected how to get firmware onto the ESP32
-** Week 6
-*** Plan
+* Week 6
+** Plan
 1) Plan
 2) Get firmware onto ESP32
 3) 
-*** Log
+** Log
 1) Planned kind of.
 2) Toolchain still isn't working
 3) (Finally) got toolchain working again.
@@ -260,9 +259,9 @@ exec(open('file.py').read())
    - Something is pointing to the wrong toolchain.
 5) Got things pointing to the right toolchain.
 6) ...and the same error comes up.
-** Week 7
-*** 7-29 --- Monday
-**** Plan
+* Week 7
+** 7-29 --- Monday
+*** Plan
 1) [X] Draw up questions for Matt
 2) [X] Start charging netbook
 3) [X] Respond to Brittany
@@ -271,11 +270,11 @@ exec(open('file.py').read())
 6) [ ] Revisit questions for Matt
 7) [ ] *Text* Keenan and Kyle about dinner
 8) [ ] Message Madeline about budget
-**** Log
+*** Log
 1) Started planning
 2) Drew up some questions for Matt
 3) 
-**** Questions for Matt
+*** Questions for Matt
 - Housing
   - I think I'm scheduled to leave the week of the 19th. Could this be extended to the end of August?
 - Vacation
@@ -284,15 +283,15 @@ exec(open('file.py').read())
   - What needs doing?
   - CPX with more flash memory?
 - 
-*** 7-31 --- Wednesday
-**** Plan
+** 7-31 --- Wednesday
+*** Plan
 1) [X] Email about housing.
    - CC Matt about travel times
 2) [X] Make Github repository
 3) [X] Organize docs.
 4) [ ] Reap up on Racket classes
 5) [ ] Modify Racket code to work with CPX
-**** Log
+*** Log
 1) Made a Racket program that copies a file on a button click (yesterday)
 2) Reconfigured some folders and servers to make more sense.
 3) Created Github repository for CURE
@@ -300,20 +299,38 @@ exec(open('file.py').read())
 5) Further organized docs.
 6) Deleted junk files.
 7) Started trying to figure out how to make button in copy.rkt interactive.
-**** Questions for Matt
+*** Questions for Matt
 1) Should we make a git repository for everything?
 2) Heads up about vacation
-*** 8-1 --- Thursday
-**** Plan
-1) [ ] Finish reading about Racket classes
+** 8-1 --- Thursday
+*** Plan
+1) [X] Finish reading about Racket classes
 2) [ ] Modify copy.rkt to work with CPX
-3) [ ] Make copy.rkt confirm copy
+3) [X] Make copy.rkt confirm copy
 4) [ ] Email Matt about vacation plans
-**** Log
+*** Log
 1) Got Racket to work in Spacemacs
 2) Brainstormed ways to improve copy.rkt
    - Got ahead of myself here.
 3) Made things bigger.
-**** Questions for Matt
+*** Questions for Matt
 1) Why put all the GUI elements in a function? It seems to make it harder to access them.
+** 8-2 --- Friday
+*** Plan
+1) [X] Start work on cpx-copy.rkt
+2) [ ] Make cpx-copy Windows-compatible
+3) [ ] Commit & push changes
+4) [ ] Time sheet
 
+*** Log
+* Week 8
+** 8-5 --- Monday
+*** Plan
+1) [X] Work on cpx-copy.rkt
+   - There doesn't appear to be a good way to list the disk drives for Windows
+2) [ ] Email Matt vacation plans
+
+** 8-6 --- Tuesday
+*** Plan
+1) [ ] Email Matt with VT plans
+2) [ ] Get cpx-copy to work on macos
